@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import './dummy_data.dart';
+import '../dummy_data.dart';
 import 'package:flutter/material.dart';
-import './category_item.dart';
+import '../widget/category_item.dart';
 
 //not necessary but need to controll the entire content of the screen
 class CategoriesScreen extends StatelessWidget {
