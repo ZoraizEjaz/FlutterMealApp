@@ -38,6 +38,17 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
+      //if route is not defined in routes than On Generate Route will be called
+      onGenerateRoute: (settings) {
+        print(settings.arguments);
+        // if (settings.name == '/meal-detail') {
+        //   return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+        // }
+      },
+      //show something on the screen if does crashes for example
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+      },
     );
   }
 }
